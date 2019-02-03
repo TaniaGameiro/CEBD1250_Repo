@@ -1,24 +1,26 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier-Bold;\f2\fmodern\fcharset0 Courier;
 \f3\fmodern\fcharset0 CourierNewPSMT;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue11;\red0\green0\blue109;
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue109;
 \red14\green109\blue108;\red15\green112\blue1;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c0;\cssrgb\c0\c0\c50196;
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgenericrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c50196;
 \cssrgb\c0\c49804\c49804;\cssrgb\c0\c50196\c0;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\margl1440\margr1440\vieww13500\viewh15080\viewkind0
 \deftab720
 \pard\pardeftab720\sl380\partightenfactor0
 
 \f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
-Get all female employees\cb1 \
-\cb3 Get all employees hired after 01-01-1995\cb1 \
-\cb3 Get all the valid titles (with to_date equals to 01-01-9999)\cb1 \
-\cb3 Get all salaries from 60000 to 90000\cb1 \
-\cb3 Get all titles where title is equal to engineer\cb1 \
-Insert a new row into course table with 1, \'91CED-1250\'92, \'91Big Data Storage\'92 \
-\cb3 Delete all male employees hired at 01-01-2009\cb1 \
-\cb3 Update the salary of employee 499984 to 100000\cb1 \
-\cb3 Delete all titles not valid (with to_date not equal to 01-01-9999)\cb1 \
+Homework - SQL Exercises\
+\
+Get all female employees\
+Get all employees hired after 01-01-1995\
+Get all the valid titles (with to_date equals to 01-01-9999)\
+Get all salaries from 60000 to 90000\
+Get all titles where title is equal to engineer\
+\cb1 Insert a new row into course table with 1, \'91CED-1250\'92, \'91Big Data Storage\'92 \
+\cb3 Delete all male employees hired at 01-01-2009\
+Update the salary of employee 499984 to 100000\
+Delete all titles not valid (with to_date not equal to 01-01-9999)\cb1 \
 \'a0\
 \
 SQL CODE:\
@@ -37,20 +39,12 @@ COURSE_DESCRIPTION {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refma
 \f1\b \cf4 \ul \ulc4 VARCHAR}}(\cf5 100\cf2 ) {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/logical-operators.html#operator_not"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 NOT}} NULL\
 )\
-\
 \pard\pardeftab720\sl280\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/alter-table.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 alter table}} {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} add COURSE_DAY {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/string-type-overview.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 VARCHAR}}(\cf5 50\cf2 );\
-\
-\pard\pardeftab720\sl280\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b \cf4 \ul \ulc4 INSERT}} INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY)\
-VALUES (\cf6 'CEBD 1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 );\
-\
-\pard\pardeftab720\sl280\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/alter-table.html"}}{\fldrslt 
-\f1\b \cf4 \ul \ulc4 alter table}} {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} add title {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/string-type-overview.html"}}{\fldrslt 
+\f1\b \cf4 \ul \ulc4 alter table}} {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} add TITLE {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/string-type-overview.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 varchar}}(\cf5 50\cf2 );\
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/alter-table.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 alter table}} {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} add HIRE_DATE {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/numeric-type-overview.html"}}{\fldrslt 
@@ -75,36 +69,50 @@ VALUES (\cf6 'CEBD 1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE 
 \f2\fs24  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} ADD NAME {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/string-type-overview.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 VARCHAR}} (\cf5 100\cf2 );\
 \
-\pard\pardeftab720\sl280\partightenfactor0
+\pard\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b \cf4 \ul \ulc4 INSERT}} INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER,\
-HIRE_DATE, title, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\
-VALUES (\cf6 '1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 , \cf6 'F'\cf2 , \cf6 '1989-09-08'\cf2 , \cf6 'DATA SCIENTIST'\cf2 , \cf6 '49000'\cf2 , \cf6 'MARIA BARROS'\cf2 ,\cf6  \'919999-01-01\'92\cf2 ,\cf6 \'91499514\'92\cf2 );
-\f3\fs26\fsmilli13333 \
+\f1\b\fs23\fsmilli11700 \cf4 INSERT}}
+\fs23\fsmilli11700 \cf0  
+\f1\b \cf4 INTO
+\f2\b0 \cf0  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER, HIRE_DATE, TITLE, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\uc0\u8232 
+\f1\b \cf4 VALUES
+\f2\b0 \cf0  (\cf6 '1250'\cf0 , \cf6 'BIG DATA STORAGE'\cf0 , \cf6 'DATA STORAGE CLASS'\cf0 , \cf6 'SUNDAY'\cf0 , \cf6 'F'\cf0 , \cf6 '1989-09-08'\cf0 , \cf6 'DATA SCIENTIST'\cf0 , \cf6 '49000'\cf0 , \cf6 'MARIA BARROS'\cf0 , \cf6 '9999-01-01'\cf0 ,\cf6 '499514'\cf0 );\
+\
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 INSERT}}
-\f2\fs24  INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER,\
-HIRE_DATE, title, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\
-VALUES (\cf6 '1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 , \cf6 'F'\cf2 , \cf6 '1982-10-05'\cf2 , \cf6 'DATA ARCHITECT'\cf2 , \cf6 '62000'\cf2 , \cf6 'NANCY CARRIGAN'\cf2 ,\cf6  \'919999-01-01\'92\cf2 ,\cf6  \'91498622\'92\cf2 );
-\f3\fs26\fsmilli13333 \
+\f1\b \cf4 INSERT}} 
+\f1\b \cf4 INTO
+\f2\b0 \cf0  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER, HIRE_DATE, TITLE, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\uc0\u8232 
+\f1\b \cf4 VALUES
+\f2\b0 \cf0  (\cf6 '1250'\cf0 , \cf6 'BIG DATA STORAGE'\cf0 , \cf6 'DATA STORAGE CLASS'\cf0 , \cf6 'SUNDAY'\cf0 , \cf6 'F'\cf0 , \cf6 '1982-10-05'\cf0 , \cf6 'DATA ARCHITECT'\cf0 , \cf6 '62000'\cf0 , \cf6 'NANCY CARRIGAN'\cf0 , \cf6 '9999-01-01'\cf0 , \cf6 '498622'\cf0 );\
+
+\f3\fs26\fsmilli13333 \cf2 \
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 INSERT}}
-\f2\fs24  INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER,\
-HIRE_DATE, title, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\
-VALUES (\cf6 '1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 , \cf6 'F'\cf2 , \cf6 '1992-01-10'\cf2 , \cf6 'DATA ANALYST'\cf2 , \cf6 '43000'\cf2 , \cf6 'TINA MUNCH'\cf2 ,\cf6  \cf6 '\cf6 9999-01-01\cf6 '\cf2 ,\cf6  \cf6 '\cf6 500002\cf6 '\cf2 );
-\f3\fs26\fsmilli13333 \
+\f1\b\fs23\fsmilli11700 \cf4 INSERT}}
+\f2\fs23\fsmilli11700 \cf0  
+\f1\b \cf4 INTO
+\f2\b0 \cf0  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER, HIRE_DATE, TITLE, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\uc0\u8232 
+\f1\b \cf4 VALUES
+\f2\b0 \cf0  (\cf6 '1250'\cf0 , \cf6 'BIG DATA STORAGE'\cf0 , \cf6 'DATA STORAGE CLASS'\cf0 , \cf6 'SUNDAY'\cf0 , \cf6 'F'\cf0 , \cf6 '1992-01-10'\cf0 , \cf6 'DATA ANALYST'\cf0 , \cf6 '43000'\cf0 , \cf6 'TINA MUNCH'\cf0 , \cf6 '9999-01-01'\cf0 , \cf6 '500002'\cf0 );\
+
+\f3\fs26\fsmilli13333 \cf2 \
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 INSERT}}
-\f2\fs24  INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER,\
-HIRE_DATE, title, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\
-VALUES (\cf6 '1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 , \cf6 'M'\cf2 , \cf6 '1987-01-03'\cf2 , \cf6 \'91ENGINEER\'92\cf2 , \cf6 '88000'\cf2 , \cf6 'TONY ROMANO'\cf2 , \cf6 '\cf6 9999-01-01\cf6 '\cf2 ,\cf6  \cf6 '\cf6 499984\cf6 '\cf2 );
-\f3\fs26\fsmilli13333 \
+\f1\b\fs23\fsmilli11700 \cf4 INSERT}}
+\f2\fs23\fsmilli11700 \cf0  
+\f1\b \cf4 INTO
+\f2\b0 \cf0  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER, HIRE_DATE, TITLE, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\uc0\u8232 
+\f1\b \cf4 VALUES
+\f2\b0 \cf0  (\cf6 '1250'\cf0 , \cf6 'BIG DATA STORAGE'\cf0 , \cf6 'DATA STORAGE CLASS'\cf0 , \cf6 'SUNDAY'\cf0 , \cf6 'M'\cf0 , \cf6 '1987-01-03'\cf0 , \cf6 'ENGINEER'\cf0 , \cf6 '88000'\cf0 , \cf6 'TONY ROMANO'\cf0 , \cf6 '9999-01-01'\cf0 , \cf6 '499984'\cf0 );\
+
+\f3\fs26\fsmilli13333 \cf2 \
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/insert.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 INSERT}}
-\f2\fs24  INTO {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER,\
-HIRE_DATE, title, SALARIES, NAME, TO_DATE, \'a0EMPLOYEE_NUM)\
-VALUES (\cf6 '1250'\cf2 , \cf6 'BIG DATA STORAGE'\cf2 , \cf6 'DATA STORAGE CLASS'\cf2 , \cf6 'SUNDAY'\cf2 , \cf6 'M'\cf2 , \cf6 '2009-01-01'\cf2 , \cf6 \'91SOLUTIONS ARCHITECT\'92\cf2 , \cf6 '75000'\cf2 , \cf6 'MARK HENDERSON'\cf2 ,\cf6 '\cf6 9999-01-01\cf6 '\cf2 ,\cf6  \cf6 '\cf6 502911\cf6 '\cf2 );
-\f3\fs26\fsmilli13333 \
+\f1\b\fs23\fsmilli11700 \cf4 INSERT}}
+\f2\fs23\fsmilli11700 \cf0  
+\f1\b \cf4 INTO
+\f2\b0 \cf0  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt course}} (COURSE_ID, COURSE_NAME, COURSE_DESCRIPTION, COURSE_DAY, GENDER, HIRE_DATE, TITLE, SALARIES, NAME, TO_DATE, EMPLOYEE_NUM)\uc0\u8232 
+\f1\b \cf4 VALUES
+\f2\b0 \cf0  (\cf6 '1250'\cf0 , \cf6 'BIG DATA STORAGE'\cf0 , \cf6 'DATA STORAGE CLASS'\cf0 , \cf6 'SUNDAY'\cf0 , \cf6 'M'\cf0 , \cf6 '2009-01-01'\cf0 , \cf6 'SOLUTIONS ARCHITECT'\cf0 , \cf6 '75000'\cf0 , \cf6 'MARK HENDERSON'\cf0 ,\cf6 '9999-01-01'\cf0 , \cf6 '502911'\cf0 );\
+
+\f3\fs26\fsmilli13333 \cf2 \
 \pard\pardeftab720\sl280\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt 
 \f1\b\fs24 \cf4 \ul \ulc4 SELECT}}
@@ -113,42 +121,52 @@ WHERE GENDER=\cf6 'F'\cf2 ;\
 \
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 SELECT}} * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
-WHERE HIRE_DATE >\cf6 '1995-01-01'\cf2 ;
-\f3\fs26\fsmilli13333 \
+WHERE HIRE_DATE >\cf6 '1995-01-01'\cf2 ;\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs26\fsmilli13333 \cf2 \
+\pard\pardeftab720\sl280\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt 
 \f1\b\fs24 \cf4 \ul \ulc4 SELECT}}
 \f2\fs24  * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} \
 WHERE TO_DATE = \cf6 '2009-01-01'\cf2 ;
 \f3\fs26\fsmilli13333 \
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 SELECT}}
-\f2\fs24  * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
+
+\f1\b\fs24 \cf4 \ul \ulc4 \
+{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt SELECT}}
+\f2\b0 \cf2 \ulnone  * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
 WHERE SALARIES > \cf6 '60000'\cf2  {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/logical-operators.html#operator_and"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 AND}} SALARIES < \cf6 '90000'\cf2 ;
 \f3\fs26\fsmilli13333 \
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 SELECT}}
-\f2\fs24  * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
+
+\f1\b\fs24 \cf4 \ul \ulc4 \
+{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/select.html"}}{\fldrslt SELECT}}
+\f2\b0 \cf2 \ulnone  * FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
 WHERE TITLE = \cf6 'ENGINEER'\cf2 ;
 \f3\fs26\fsmilli13333 \
+
+\f1\b\fs24 \cf4 \ul \ulc4 \
 \pard\pardeftab720\sl280\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/delete.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 DELETE}}
-\f2\fs24  FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} WHERE HIRE_DATE = \cf6 '2009-01-01'\cf2 ;
+{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/delete.html"}}{\fldrslt \cf4 DELETE}}
+\f2\b0 \cf2 \ulnone  FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} WHERE HIRE_DATE = \cf6 '2009-01-01'\cf2 ;
 \f3\fs26\fsmilli13333 \
 \pard\pardeftab720\sl280\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/update.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 UPDATE}}
-\f2\fs24  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} \
+
+\f1\b\fs24 \cf4 \ul \ulc4 \
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/update.html"}}{\fldrslt \cf4 UPDATE}}
+\f2\b0 \cf2 \ulnone  {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}} \
 \pard\pardeftab720\sl280\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/string-type-overview.html"}}{\fldrslt 
 \f1\b \cf4 \ul \ulc4 set}} SALARIES = \cf6 '100000'\cf2 \
 where EMPLOYEE_NUM = \cf6 '499984'\cf2 ;
 \f3\fs26\fsmilli13333 \
 \pard\pardeftab720\sl280\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/delete.html"}}{\fldrslt 
-\f1\b\fs24 \cf4 \ul \ulc4 DELETE}}
-\f2\fs24  FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
+
+\f1\b\fs24 \cf4 \ul \ulc4 \
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://dev.mysql.com/doc/refman/5.5/en/delete.html"}}{\fldrslt \cf4 DELETE}}
+\f2\b0 \cf2 \ulnone  FROM {\field{\*\fldinst{HYPERLINK "http://localhost:8080/?server=db&username=root&db=employees&table=course"}}{\fldrslt \ul course}}\
 WHERE TO_DATE =\'a0 \cf6 '2009-01-01'\cf2 ;
 \f3\fs26\fsmilli13333 \
 \pard\pardeftab720\sl280\partightenfactor0
